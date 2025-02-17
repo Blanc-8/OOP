@@ -1,7 +1,6 @@
-package Step6.Step6_Link3_1;
+package Step6.Step6_Link3.Step6_Link3_1;
 
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 /*

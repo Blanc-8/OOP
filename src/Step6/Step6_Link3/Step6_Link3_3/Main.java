@@ -1,12 +1,12 @@
-package Step6.Step6_Link3_4;
+package Step6.Step6_Link3.Step6_Link3_3;
 
 import java.util.HashSet;
 import java.util.Set;
 
 /*
-Write a Java program to empty an hash set.
+Write a Java program to get the number of elements in a hash set.
 
-Напишите программу на Java для опустошения хэш-множества.
+Напишите программу на Java для получения количества элементов в хэш-наборе.
  */
 public class Main {
     public static void main(String[] args) {
@@ -14,7 +14,6 @@ public class Main {
         set.add(11);
         set.add(47);
         set.add(88);
-        set.clear();
         System.out.println(set.size());
     }
 }

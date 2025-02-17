@@ -1,4 +1,4 @@
-package Step6.Step6_Link3_2;
+package Step6.Step6_Link3.Step6_Link3_2;
 
 import java.util.HashSet;
 import java.util.Iterator;
