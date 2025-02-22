@@ -11,21 +11,28 @@ that takes two lists of the same type and merges them into a single list. This m
 который берет два списка одного типа и объединяет их в один список. Этот метод чередует элементы каждого списка.
  */
 public class Main {
-    public static <T> List <T> marges (List<T> list1, List<T> list2) {
+    public static <T> List <T> merges(List<T> list1, List<T> list2) {
         List<T> newList = new ArrayList<>();
-        for (int i = 0; i < list1.size(); i++) {
+        int minSize = Math.min(list1.size(),list2.size());
+        for (int i = 0; i < minSize; i++) {
             newList.add(list1.get(i));
             newList.add(list2.get(i));
+        }
+        if (list1.size() > minSize) {
+            newList.addAll(list1.subList(minSize, list1.size()));
+        }
+        if (list2.size() > minSize) {
+            newList.addAll(list2.subList(minSize, list2.size()));
         }
         return newList;
     }
 
     public static void main(String[] args) {
-        List<Integer> integers1 = List.of(1, 2, 3, 4, 5);
+        List<Integer> integers1 = List.of(1, 2, 3, 4, 5, 6, 7);
         List<Integer> integers2 = List.of(11, 12, 13, 14, 15);
-        List<String> strings1 = List.of("Drum", "and", "Bass");
+        List<String> strings1 = List.of("Drum", "and", "Bass", "Boom", "Box");
         List<String> strings2 = List.of("Hip", "Hop", "Java");
-        System.out.println(marges(integers1,integers2));
-        System.out.println(marges(strings1,strings2));
+        System.out.println(merges(integers1,integers2));
+        System.out.println(merges(strings1,strings2));
     }
 }

@@ -8,10 +8,14 @@ Write a Java program to calculate the average value of array elements.
 public class Main {
     public static void main(String[] args) {
         int[] array = {2, 8, 9, 63, 5, 4, 8, 5, -55, 87, 89};
-        int sum = 0;
-        for (int num : array) {
-            sum += num;
+        if (array.length == 0) {
+            System.out.println("Массив пуст");
+        } else {
+            int sum = 0;
+            for (int num : array) {
+                sum += num;
+            }
+            System.out.println(sum / array.length);
         }
-        System.out.println(sum / array.length);
     }
 }
